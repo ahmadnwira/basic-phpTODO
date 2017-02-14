@@ -14,12 +14,14 @@
 			die('connection failure');
 		}
 	}
+	
+
 
 	function select($query){
 
-		$statement = connection()->prepare($query);
-				
-		$statement->execute();
+			$statement = connection()->prepare($query);
+					
+			$statement->execute();
 
 		$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,13 +48,18 @@
         }
 	}
 
-		/* 
-			UPDATE $table
-			SET $col=$value	
-			WHERE $condtion;
 
-			//update($table,[$col,$val],$condtion)
-		*/
+	function runSql($query){
+
+		try{
+			$statement = connection()->prepare($query);
+	
+        	$statement->execute();
+		}
+        catch (Exception $e) {
+            die('failed');
+        }
+	}
 
 	function update($table,$column,$value,$condtion){
 
@@ -61,12 +68,15 @@
 				$table, $column , $value , $condtion
 			);
 
-		try{
-			$statement = connection()->prepare($query);
+		runSql($query);
+	}
+
+	function delete($table,$column,$value){
+
+		$query = sprintf('delete from %s where %s = %s ',
 		
-            $statement->execute();
-		}
-        catch (Exception $e) {
-            die('failed');
-        }
+			$table, $column , $value 
+		);
+
+		runSql($query);
 	}

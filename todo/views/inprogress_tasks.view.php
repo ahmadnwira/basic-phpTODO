@@ -21,8 +21,9 @@
 					<button name="action" value="done" type="submit" 
 							class="btn btn-edit btn-xs">&#x2713;</button>
 					
-					<button name="action" value="edit" type="submit" 
-							class="btn btn-edit btn-xs">&#10002;</button>
+					<button class="btn btn-edit btn-xs">
+						<a href="../controllers/edit_task.controller.php">&#10002;</a>
+					</button>
 					
 					<button name="action" value="delete" type="submit" 
 							class="btn btn-edit btn-xs">&#x2715;</button>

@@ -8,7 +8,8 @@
 		
 		switch ($_POST['action']) {
 					case 'delete':
-						echo "deleting task";
+						delete('tasks','id',$_POST['id']);
+						header('Location: ../views/index.view.php');
 						break;
 					
 					case 'done':
@@ -17,6 +18,7 @@
 						break;
 
 					case 'edit':
+						header('Location: ../controllers/edite_task.controller.php');
 						break;
 
 					default:
