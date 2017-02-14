@@ -63,7 +63,7 @@
 
 	function update($table,$column,$value,$condtion){
 
-		$query = sprintf('update  %s set %s = %s where %s ',
+		$query = sprintf('update  %s set %s = "%s" where %s ',
 			
 				$table, $column , $value , $condtion
 			);

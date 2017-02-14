@@ -1,8 +1,7 @@
 <?php
 
-	define('DB_NAME', 'todo');
-	define('DB_USR', 'root');
-	define('DB_KEY', 'e.n.g.123');
-	define('DB_TYPE', 'mysql');
-	define('HOST', 'localhost');
-	
+	define('DB_NAME', '');
+	define('DB_USR', '');
+	define('DB_KEY', '');
+	define('DB_TYPE', '');
+	define('HOST', '');

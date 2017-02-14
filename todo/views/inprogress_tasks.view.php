@@ -22,7 +22,10 @@
 							class="btn btn-edit btn-xs">&#x2713;</button>
 					
 					<button class="btn btn-edit btn-xs">
-						<a href="../controllers/edit_task.controller.php">&#10002;</a>
+
+						<a href="../controllers/edit_task.controller.php?task=<?=$task['task']?>&importance=<?=$task['importance']?>&id=<?=$task['id']?>"/>
+						
+						&#10002;</a>
 					</button>
 					
 					<button name="action" value="delete" type="submit" 
