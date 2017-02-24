@@ -1,4 +1,5 @@
 
+
 // dsiplay new-task-form-modal
 $("#new").on("click",function(){
 	$("#new-task-form-container").css("display","block");
@@ -28,3 +29,9 @@ $(document).on('submit', '.ajax', function(e) {
 
 // loads the tasks
 $("#task-list").load("../app/list.php");
+
+$(function(){
+	if($("li").data("state")==1){
+		$("p").addClass("completed");
+	}	
+});

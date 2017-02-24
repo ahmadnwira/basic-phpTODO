@@ -41,7 +41,25 @@ class Task{
 		}		
 	}
 
+	/* update task */
+		public function updateTask($input,$id){
+		$query = sprintf(
 
+			"update tasks set %s = %s where id = %s",
+			implode(", ", array_keys($input)) ,
+			":".implode(", :", array_keys($input) )
+			,$id
+		);
+	
+		try{
+			$statement = $this->pdo->prepare($query);
+
+			$statement->execute($input);
+
+		}catch(Exception $e){
+			die("failed to update task");
+		}	
+	}
 
 	/* delete task */
 	public function deleteTask($id){

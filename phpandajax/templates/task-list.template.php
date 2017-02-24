@@ -4,7 +4,8 @@
 	<?php foreach ($tasks as $task): ?>
 
 	<li class="list-group-item" data-state="<?=$task->completed?>">
-		<?= $task->task; ?><span class="badge"><?= $task->importance ?></span>
+		<p><?= $task->task; ?></p>
+		<span class="badge"><?= $task->importance ?></span>
 	<p>	
 
 		<form action="done.php" method="POST"  class="ajax inline">

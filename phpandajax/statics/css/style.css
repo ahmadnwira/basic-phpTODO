@@ -48,3 +48,8 @@ h3{
 .inline{
 	display:inline;
 }
+
+.completed{
+	text-decoration: line-through;
+	color:#888;
+}

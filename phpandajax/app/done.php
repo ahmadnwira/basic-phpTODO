@@ -6,4 +6,4 @@
 
 	$task = new Task(Connect::start());
 
-	$tasks = $task->updateTask(["completed"=>"1"],$_POST['id']);
+	$tasks = $task->updateTask(["completed"=>"1"],50);
