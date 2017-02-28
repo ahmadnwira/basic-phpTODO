@@ -1,0 +1,11 @@
+.card{
+	margin-bottom:1em;
+}
+
+.delete{
+	color:#ff2222;
+}
+
+.delete:hover{
+	color:#e80b0b;
+}
