@@ -16,4 +16,6 @@
   	<button type="submit" class="btn btn-primary">Add Note </button>
 </form>
 
+@include('notes.erros')
+
 @endsection

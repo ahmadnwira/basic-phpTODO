@@ -25,6 +25,12 @@ class NotesController extends Controller{
 
 
 	public function store(Request $request){
+
+		$this->validate($request, [
+        
+        	'note' => 'required|max:255',
+        
+    	]);
 		
 		$note = new Note;
 
